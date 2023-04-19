@@ -7,7 +7,13 @@ public class TeamsPlayers {
         Scanner scanner=new Scanner(System.in);
         System.out.println("Введіть назву першої команди гравців");
         String team1 = scanner.next();
-        System.out.println(team1);
+        if(scanner.hasNext()){
+            team1=scanner.nextLine();
+        }else{
+            System.out.println("Не вірно. Введи текст");
+            System.exit(0);
+        }
+
         System.out.println("Введи кількість фрагів для 5-ти гравців першої команди, після фракції одного гравця, нажми \"Enter\" - щоб перейти до наступного ");
        int team1Players1 = scanner.nextInt();
        int team1Players2 = scanner.nextInt();
@@ -17,7 +23,13 @@ public class TeamsPlayers {
 
         System.out.println("Введіть назву другої команди гравців");
         String team2 = scanner.next();
-        System.out.println(team2);
+        if(scanner.hasNext()){
+            team2=scanner.nextLine();
+        }else{
+            System.out.println("Не вірно. Введи текст");
+            System.exit(0);
+        }
+
         System.out.println("Введи кількість фрагів для 5-ти гравців другої команди, після фракції одного гравця, нажми \"Enter\" - щоб перейти до наступного ");
         int team2Players1 = scanner.nextInt();
         int team2Players2 = scanner.nextInt();
