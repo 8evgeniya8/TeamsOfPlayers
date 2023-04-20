@@ -50,7 +50,7 @@ public class TeamsPlayers {
 
         System.out.println("Введи кількість фрагів для 5-ти гравців другої команди, після фракції одного гравця, нажми \"Enter\" - щоб перейти до наступного ");
         int team2Players1 = 0;
-            if (scanner.hasNextInt()){
+        if (scanner.hasNextInt()){
             team2Players1=scanner.nextInt();
             scanner.nextLine();
             }else {
@@ -85,8 +85,10 @@ public class TeamsPlayers {
             System.out.println("Помилка. Введіть лише число");
             }
 
-        double team2Result=(team2Players1+team2Players2+team2Players3+team2Players4+team2Players5)/5;
-        double team1Result=(team1Players1+team1Players2+team1Players3+team1Players4+team1Players5)/5;
+        int people=5;
+        double team2Result=(team2Players1+team2Players2+team2Players3+team2Players4+team2Players5)/(double)people;
+        double team1Result=(team1Players1+team1Players2+team1Players3+team1Players4+team1Players5)/(double)people;
+
 
         if (team1Result>team2Result){
             System.out.println("Перемогла команда " + team1 + " набрала " + team1Result + " очків");
